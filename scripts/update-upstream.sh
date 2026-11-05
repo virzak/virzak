@@ -5,7 +5,7 @@
 set -euo pipefail
 
 user="${PROFILE_USER:-virzak}"
-count="${UPSTREAM_COUNT:-10}"
+count="${UPSTREAM_COUNT:-5}"
 readme="$(dirname "$0")/../README.md"
 query="author:$user type:pr is:merged -user:$user -user:zompinc"
 
@@ -17,7 +17,7 @@ list=$(echo "$result" | jq -r --argjson n "$count" '
   .items | sort_by(.closed_at) | reverse | .[:$n] | .[] |
   "- [\(.repository_url | sub(".*/repos/"; ""))#\(.number)](\(.html_url)): \(.title | gsub("[\\[\\]<>*]"; ""))"' | tr -d '\r')
 
-section=$(printf '%s\n\n%s\n' "$total merged pull requests in projects I don't own. The most recent:" "$list")
+section=$(printf '%s\n\n%s\n' "$total merged pull requests in projects I don't own. The latest:" "$list")
 
 awk -v section="$section" '
   /<!-- upstream:start -->/ { print; print ""; print section; print ""; skip = 1; next }
