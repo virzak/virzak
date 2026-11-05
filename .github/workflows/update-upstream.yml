@@ -1,0 +1,32 @@
+name: Update upstream pull requests
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  ACT:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rewrite the upstream section
+        run: bash scripts/update-upstream.sh
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Commit and push if it changed
+        if: ${{ !env.ACT }}
+        run: |
+          git diff --quiet && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Update upstream pull requests"
+          git push

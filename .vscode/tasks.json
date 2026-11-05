@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "upstream: update",
+      "detail": "Rewrite the upstream section of README.md; needs a logged-in gh",
+      "type": "process",
+      "command": "bash",
+      "args": ["${workspaceFolder}/scripts/update-upstream.sh"],
+      "problemMatcher": []
+    }
+  ]
+}
