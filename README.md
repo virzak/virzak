@@ -39,13 +39,13 @@ Runtime and tooling:
 
 <!-- upstream:start -->
 
-72 merged pull requests in projects I don't own. The latest:
+73 merged pull requests in projects I don't own. The latest:
 
+- [dotnet/runtime#137159](https://github.com/dotnet/runtime/pull/137159): Bundle the CoreCLR runtime pack for linux-bionic
 - [podman-container-tools/podman#30109](https://github.com/podman-container-tools/podman/pull/30109): Revert rejected container updates and skip no-op pids updates
 - [dotnet/SqlClient#4798](https://github.com/dotnet/SqlClient/pull/4798): Verify the VBS enclave key binding on the async attestation path
 - [dotnet/SqlClient#4790](https://github.com/dotnet/SqlClient/pull/4790): Move IdentityModel dependencies to Extensions.Azure
 - [mini-software/MiniExcel#1020](https://github.com/mini-software/MiniExcel/pull/1020): Add QueryCells to read cell formulas, font colors and number formats
-- [npgsql/efcore.pg#2200](https://github.com/npgsql/efcore.pg/pull/2200): Translate Enumerable.Concat over bytea to ||
 
 <!-- upstream:end -->
 
