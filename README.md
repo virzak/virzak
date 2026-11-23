@@ -39,13 +39,13 @@ Runtime and tooling:
 
 <!-- upstream:start -->
 
-75 merged pull requests in projects I don't own. The latest:
+76 merged pull requests in projects I don't own. The latest:
 
+- [termux/termux-packages#33274](https://github.com/termux/termux-packages/pull/33274): enhance(main/dotnet10.0): build with CoreCLR instead of Mono
 - [dotnet/runtime#137198](https://github.com/dotnet/runtime/pull/137198): Fix the ioctl configure check on bionic
 - [dotnet/runtime#137158](https://github.com/dotnet/runtime/pull/137158): Don't enable FeatureXplatEventSource for linux-bionic
 - [dotnet/runtime#137159](https://github.com/dotnet/runtime/pull/137159): Bundle the CoreCLR runtime pack for linux-bionic
 - [podman-container-tools/podman#30109](https://github.com/podman-container-tools/podman/pull/30109): Revert rejected container updates and skip no-op pids updates
-- [dotnet/SqlClient#4798](https://github.com/dotnet/SqlClient/pull/4798): Verify the VBS enclave key binding on the async attestation path
 
 <!-- upstream:end -->
 
